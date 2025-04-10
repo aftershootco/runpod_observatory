@@ -22,6 +22,7 @@ Install the required package:
 
 ```bash
 pip install dataframe_image
+pip install fpdf
 ```
 
 Make sure you have the `RUNPOD_API_KEY` environment variable set up. You can find your API key in the [RunPod user settings](https://www.runpod.io/console/user/settings).
