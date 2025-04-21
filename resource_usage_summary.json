@@ -1,0 +1,145 @@
+{
+    "Nilay": {
+        "summary": {
+            "numberOfMachines": 3,
+            "totalGPUs": 7,
+            "totalCost": 412.36,
+            "totalCostPerHour": 7.390000000000001,
+            "totalGpuHours": 416.79
+        },
+        "machines": [
+            {
+                "name": "Nilay-body-parsing-training-large",
+                "costPerHrPerGPU": 1.36,
+                "costPerHour": 5.44,
+                "totalHours": 53.2,
+                "totalCost": 289.41,
+                "gpuType": "NVIDIA RTX A4500",
+                "gpuCount": 4,
+                "containerDiskInGb": 20,
+                "networkVolumeSizeInGb": 1000
+            },
+            {
+                "name": "Nilay-body-parsing-training-medium",
+                "costPerHrPerGPU": 0.76,
+                "costPerHour": 1.52,
+                "totalHours": 53.38,
+                "totalCost": 81.14,
+                "gpuType": "NVIDIA RTX 4000 Ada Generation",
+                "gpuCount": 2,
+                "containerDiskInGb": 20,
+                "networkVolumeSizeInGb": 1000
+            },
+            {
+                "name": "Nilay-body-parsing-training-small",
+                "costPerHrPerGPU": 0.43,
+                "costPerHour": 0.43,
+                "totalHours": 97.23,
+                "totalCost": 41.81,
+                "gpuType": "NVIDIA L4",
+                "gpuCount": 1,
+                "containerDiskInGb": 20,
+                "networkVolumeSizeInGb": 1000
+            }
+        ]
+    },
+    "Aman": {
+        "summary": {
+            "numberOfMachines": 3,
+            "totalGPUs": 3,
+            "totalCost": 101.2,
+            "totalCostPerHour": 0.8699999999999999,
+            "totalGpuHours": 348.96
+        },
+        "machines": [
+            {
+                "name": "Aman-culling-backend-3",
+                "costPerHrPerGPU": 0.29,
+                "costPerHour": 0.29,
+                "totalHours": 113.54,
+                "totalCost": 32.93,
+                "gpuType": "NVIDIA RTX A5000",
+                "gpuCount": 1,
+                "containerDiskInGb": 280,
+                "networkVolumeSizeInGb": 7000
+            },
+            {
+                "name": "Aman-culling-backend-2",
+                "costPerHrPerGPU": 0.29,
+                "costPerHour": 0.29,
+                "totalHours": 117.59,
+                "totalCost": 34.1,
+                "gpuType": "NVIDIA RTX A5000",
+                "gpuCount": 1,
+                "containerDiskInGb": 500,
+                "networkVolumeSizeInGb": 7000
+            },
+            {
+                "name": "Aman-culling-backend",
+                "costPerHrPerGPU": 0.29,
+                "costPerHour": 0.29,
+                "totalHours": 117.83,
+                "totalCost": 34.17,
+                "gpuType": "NVIDIA RTX A5000",
+                "gpuCount": 1,
+                "containerDiskInGb": 1000,
+                "networkVolumeSizeInGb": 7000
+            }
+        ]
+    },
+    "dev": {
+        "summary": {
+            "numberOfMachines": 2,
+            "totalGPUs": 2,
+            "totalCost": 86.84,
+            "totalCostPerHour": 0.76,
+            "totalGpuHours": 228.51
+        },
+        "machines": [
+            {
+                "name": "dev-pod",
+                "costPerHrPerGPU": 0.32,
+                "costPerHour": 0.32,
+                "totalHours": 114.24,
+                "totalCost": 36.56,
+                "gpuType": "NVIDIA RTX A4000",
+                "gpuCount": 1,
+                "containerDiskInGb": 20,
+                "networkVolumeSizeInGb": 1000
+            },
+            {
+                "name": "dev-pod2",
+                "costPerHrPerGPU": 0.44,
+                "costPerHour": 0.44,
+                "totalHours": 114.27,
+                "totalCost": 50.28,
+                "gpuType": "NVIDIA A40",
+                "gpuCount": 1,
+                "containerDiskInGb": 20,
+                "networkVolumeSizeInGb": 1000
+            }
+        ]
+    },
+    "vedang": {
+        "summary": {
+            "numberOfMachines": 1,
+            "totalGPUs": 1,
+            "totalCost": 493.27,
+            "totalCostPerHour": 0.86,
+            "totalGpuHours": 573.57
+        },
+        "machines": [
+            {
+                "name": "vedang_scene_recog_multi_model",
+                "costPerHrPerGPU": 0.86,
+                "costPerHour": 0.86,
+                "totalHours": 573.57,
+                "totalCost": 493.27,
+                "gpuType": "NVIDIA L40S",
+                "gpuCount": 1,
+                "containerDiskInGb": 80,
+                "networkVolumeSizeInGb": 0
+            }
+        ]
+    }
+}

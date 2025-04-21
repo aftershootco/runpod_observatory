@@ -8,6 +8,7 @@ def create_report_pdf():
     # List of images in the order you want them placed in the PDF
     images = [
         "table.png",
+        "bar_totalCostPerDay.png",
         "bar_totalCost.png",
         "bar_totalGPUs.png",
         "bar_numMachines.png",

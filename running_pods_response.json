@@ -1,0 +1,512 @@
+[
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 20,
+        "costPerHr": 1.36,
+        "createdAt": "2025-04-18 23:55:22.538 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "8aawgfkdrlxyh5rnxeyi",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 4,
+        "id": "liy2lccwqju8lb",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-18 23:55:22.53 +0000 UTC",
+        "lastStatusChange": "Rented by User: Fri Apr 18 2025 23:55:22 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EU-RO-1",
+            "diskThroughputMBps": 2547,
+            "gpuTypeId": "NVIDIA RTX A4500",
+            "location": "RO",
+            "maxDownloadSpeedMbps": 13197,
+            "maxUploadSpeedMbps": 5297,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 197985
+        },
+        "machineId": "7r9go4r5c4yp",
+        "memoryInGb": 250,
+        "name": "Nilay-body-parsing-training-large",
+        "networkVolume": {
+            "dataCenterId": "EU-RO-1",
+            "id": "m728eyplaq",
+            "name": "retouching-data",
+            "size": 1000
+        },
+        "networkVolumeId": "m728eyplaq",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 19233
+        },
+        "publicIp": "213.173.107.139",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 48,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 20,
+        "costPerHr": 0.76,
+        "createdAt": "2025-04-18 23:44:38.056 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "6umk4fxz8wrsbbw6vb8q",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 2,
+        "id": "mo4fpmuw4vr31k",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-18 23:44:38.013 +0000 UTC",
+        "lastStatusChange": "Rented by User: Fri Apr 18 2025 23:44:38 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EU-RO-1",
+            "diskThroughputMBps": 2727,
+            "gpuTypeId": "NVIDIA RTX 4000 Ada Generation",
+            "location": "RO",
+            "maxDownloadSpeedMbps": 12378,
+            "maxUploadSpeedMbps": 5008,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 326381
+        },
+        "machineId": "ij0kkfer2z9i",
+        "memoryInGb": 100,
+        "name": "Nilay-body-parsing-training-medium",
+        "networkVolume": {
+            "dataCenterId": "EU-RO-1",
+            "id": "m728eyplaq",
+            "name": "retouching-data",
+            "size": 1000
+        },
+        "networkVolumeId": "m728eyplaq",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 14776
+        },
+        "publicIp": "213.173.108.12",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 19,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 32,
+        "costPerHr": 1.64,
+        "createdAt": "2025-04-18 14:14:57.236 +0000 UTC",
+        "desiredStatus": "EXITED",
+        "env": {
+            "JUPYTER_PASSWORD": "zfk68v1vmfk6l9ien6jo",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "j6yxrgpbys73eq",
+        "imageName": "runpod2023/aftershoot-retouching-poc-base:main",
+        "lastStartedAt": "2025-04-18 18:49:27.828 +0000 UTC",
+        "lastStatusChange": "Exited by user: Sat Apr 19 2025 18:44:05 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EU-RO-1",
+            "diskThroughputMBps": 2782,
+            "gpuTypeId": "NVIDIA A100 80GB PCIe",
+            "location": "RO",
+            "maxDownloadSpeedMbps": 8962,
+            "maxUploadSpeedMbps": 7288,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 51674
+        },
+        "machineId": "fz6bxdjw011o",
+        "memoryInGb": 125,
+        "name": "Vineet-FaceParsing",
+        "portMappings": null,
+        "publicIp": "",
+        "templateId": "cv756fh1q0",
+        "vcpuCount": 16,
+        "volumeInGb": 200,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 20,
+        "costPerHr": 0.43,
+        "createdAt": "2025-04-17 03:54:04.157 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "ryg2sztb5u5ue3olwvmw",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "9qf628pclfpton",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-17 03:54:04.151 +0000 UTC",
+        "lastStatusChange": "Rented by User: Thu Apr 17 2025 03:54:04 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EU-RO-1",
+            "diskThroughputMBps": 6463,
+            "gpuTypeId": "NVIDIA L4",
+            "location": "RO",
+            "maxDownloadSpeedMbps": 1841,
+            "maxUploadSpeedMbps": 957,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 156504
+        },
+        "machineId": "2oiis7r5evt6",
+        "memoryInGb": 62,
+        "name": "Nilay-body-parsing-training-small",
+        "networkVolume": {
+            "dataCenterId": "EU-RO-1",
+            "id": "m728eyplaq",
+            "name": "retouching-data",
+            "size": 1000
+        },
+        "networkVolumeId": "m728eyplaq",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 12923
+        },
+        "publicIp": "213.173.105.12",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 16,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 280,
+        "costPerHr": 0.29,
+        "createdAt": "2025-04-16 11:35:14.507 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "lh7gkg6xuf2u3m9t9zyj",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "qjvrnb36fkpz50",
+        "imageName": "docker.io/library/ubuntu:rolling",
+        "lastStartedAt": "2025-04-16 11:35:14.5 +0000 UTC",
+        "lastStatusChange": "Rented by User: Wed Apr 16 2025 11:35:14 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "CA-MTL-1",
+            "diskThroughputMBps": 12401,
+            "gpuTypeId": "NVIDIA RTX A5000",
+            "location": "CA",
+            "maxDownloadSpeedMbps": 8347,
+            "maxUploadSpeedMbps": 1253,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 1062390
+        },
+        "machineId": "g5frxqku6uh4",
+        "memoryInGb": 50,
+        "name": "Aman-culling-backend-3",
+        "networkVolume": {
+            "dataCenterId": "CA-MTL-1",
+            "id": "wfiz787s62",
+            "name": "ca-mtl-1",
+            "size": 7000
+        },
+        "networkVolumeId": "wfiz787s62",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 22191
+        },
+        "publicIp": "69.30.85.218",
+        "templateId": "vfu8kul3dx",
+        "vcpuCount": 9,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 20,
+        "costPerHr": 0.32,
+        "createdAt": "2025-04-16 10:53:14.567 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "u3gscowx9gsqqt4gjf4d",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "l2e3uaxqc226tl",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-16 10:53:14.56 +0000 UTC",
+        "lastStatusChange": "Rented by User: Wed Apr 16 2025 10:53:14 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EUR-IS-1",
+            "diskThroughputMBps": 2787,
+            "gpuTypeId": "NVIDIA RTX A4000",
+            "location": "IE",
+            "maxDownloadSpeedMbps": 3923,
+            "maxUploadSpeedMbps": 2158,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 49990
+        },
+        "machineId": "62dvl12cuot7",
+        "memoryInGb": 62,
+        "name": "dev-pod",
+        "networkVolume": {
+            "dataCenterId": "EUR-IS-1",
+            "id": "w7ogiycrnd",
+            "name": "dev vol 3",
+            "size": 1000
+        },
+        "networkVolumeId": "w7ogiycrnd",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 20552
+        },
+        "publicIp": "157.157.221.29",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 18,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 20,
+        "costPerHr": 0.44,
+        "createdAt": "2025-04-16 10:51:41.163 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "6hwsaey8oecz1a07pxjp",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "ysqa6hlkbhh04o",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-16 10:51:41.155 +0000 UTC",
+        "lastStatusChange": "Rented by User: Wed Apr 16 2025 10:51:41 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "CA-MTL-1",
+            "diskThroughputMBps": 12201,
+            "gpuTypeId": "NVIDIA A40",
+            "location": "CA",
+            "maxDownloadSpeedMbps": 8354,
+            "maxUploadSpeedMbps": 1269,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 3923
+        },
+        "machineId": "j700bt7bhste",
+        "memoryInGb": 50,
+        "name": "dev-pod2",
+        "networkVolume": {
+            "dataCenterId": "CA-MTL-1",
+            "id": "dbl2bze4p7",
+            "name": "dev vol 2",
+            "size": 1000
+        },
+        "networkVolumeId": "dbl2bze4p7",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 22096
+        },
+        "publicIp": "69.30.85.129",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 9,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 500,
+        "costPerHr": 0.29,
+        "createdAt": "2025-04-16 07:32:05.97 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "7ejjoks5isxq35fv343v",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "fc54uf90i7txcq",
+        "imageName": "docker.io/library/ubuntu:rolling",
+        "lastStartedAt": "2025-04-16 07:32:05.964 +0000 UTC",
+        "lastStatusChange": "Rented by User: Wed Apr 16 2025 07:32:05 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "CA-MTL-1",
+            "diskThroughputMBps": 11601,
+            "gpuTypeId": "NVIDIA RTX A5000",
+            "location": "CA",
+            "maxDownloadSpeedMbps": 8409,
+            "maxUploadSpeedMbps": 1271,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 661885
+        },
+        "machineId": "qc05fiu1bbrj",
+        "memoryInGb": 50,
+        "name": "Aman-culling-backend-2",
+        "networkVolume": {
+            "dataCenterId": "CA-MTL-1",
+            "id": "wfiz787s62",
+            "name": "ca-mtl-1",
+            "size": 7000
+        },
+        "networkVolumeId": "wfiz787s62",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 22031
+        },
+        "publicIp": "69.30.85.192",
+        "templateId": "vfu8kul3dx",
+        "vcpuCount": 9,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 1000,
+        "costPerHr": 0.29,
+        "createdAt": "2025-04-16 07:18:00.59 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "3971ets8ohuwax4o6a5p",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1VkYMKEn5uHLXn3CvAr61yLS3/txisn7aeKeL5cRDQ nilay.s@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "nyojpj6o0xdpas",
+        "imageName": "docker.io/library/ubuntu:rolling",
+        "lastStartedAt": "2025-04-16 07:18:00.581 +0000 UTC",
+        "lastStatusChange": "Rented by User: Wed Apr 16 2025 07:18:00 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "CA-MTL-1",
+            "diskThroughputMBps": 13101,
+            "gpuTypeId": "NVIDIA RTX A5000",
+            "location": "CA",
+            "maxDownloadSpeedMbps": 8167,
+            "maxUploadSpeedMbps": 1254,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 851776
+        },
+        "machineId": "op8uuj3k0fgh",
+        "memoryInGb": 50,
+        "name": "Aman-culling-backend",
+        "networkVolume": {
+            "dataCenterId": "CA-MTL-1",
+            "id": "wfiz787s62",
+            "name": "ca-mtl-1",
+            "size": 7000
+        },
+        "networkVolumeId": "wfiz787s62",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 22131
+        },
+        "publicIp": "69.30.85.241",
+        "templateId": "vfu8kul3dx",
+        "vcpuCount": 9,
+        "volumeInGb": 0,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 80,
+        "costPerHr": 0.86,
+        "createdAt": "2025-03-28 07:33:10.837 +0000 UTC",
+        "desiredStatus": "RUNNING",
+        "env": {
+            "JUPYTER_PASSWORD": "ngbnsoeaj40mow5v0h7b",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com"
+        },
+        "gpuCount": 1,
+        "id": "jul1j3gh6fbb20",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-09 06:01:04.006 +0000 UTC",
+        "lastStatusChange": "Resumed by user: Wed Apr 09 2025 06:01:04 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EU-NL-1",
+            "diskThroughputMBps": 6329,
+            "gpuTypeId": "NVIDIA L40S",
+            "location": "NL",
+            "maxDownloadSpeedMbps": 9260,
+            "maxUploadSpeedMbps": 7499,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 187341
+        },
+        "machineId": "tbfo8s5c4xha",
+        "memoryInGb": 125,
+        "name": "vedang_scene_recog_multi_model",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": {
+            "22": 17378
+        },
+        "publicIp": "91.199.227.82",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 32,
+        "volumeInGb": 800,
+        "volumeMountPath": "/workspace"
+    },
+    {
+        "consumerUserId": "auth0|644f865b50284b0da347579d",
+        "containerDiskInGb": 10,
+        "costPerHr": 0.43,
+        "createdAt": "2025-03-17 10:20:02.75 +0000 UTC",
+        "desiredStatus": "EXITED",
+        "env": {
+            "JUPYTER_PASSWORD": "yavagqiik4d8l0bpphlh",
+            "PUBLIC_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBdr/FhUUwdH8ygg86gUdO/QOKMOWljejGfmLyuROjuA palshaunak7@gmail.com\n\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEEUP/1Knus+d4LVkHxIkduULZUdlrAVJHvywLakF12o jaysmito101@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDYNFLQWB2Zhf7ec0/EZ8uxlKz5YKSMR6EF3OjFY2ePU ubuntu@jupyterlab-gpu-server\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwUcv+Z2cHbr76ovBYHNYSrEUpkW8tkSwlso4Q13KMU vineetmahajan2000@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPHk7w43n9Oyg+gFdboFFXmP8hgLyVK5kJBXlddnsCm runpod\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3fXfBZ9BczKZOCmLs/igsVzM951gJPEiMfsiz2d1TO vedang.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxj9aVUPRjsnrii/xDYv+vzXrtJKMFdlR9rpepeCdTh saransh.g@aftershoot.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILapf1ZZlZGb3Ljy/4BWoZGa/VnUG9H23ED+EH0Jov0B aftershoot@Aftershoots-MacBook-Air.local\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6O56sXTlGfgIaKfoOb4tbfuA9smhT/CS4zLeuVXyeS devrishik@gmail.com\n\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII290/uUGtGwHBpOLZs6aD9koyHn3RHyJRcSEoYFDGHd ashwin.y@zenbook"
+        },
+        "gpuCount": 1,
+        "id": "t2qswqhft4en1b",
+        "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+        "lastStartedAt": "2025-04-14 11:11:07.246 +0000 UTC",
+        "lastStatusChange": "Exited by user: Tue Apr 15 2025 08:09:29 GMT+0000 (Coordinated Universal Time)",
+        "machine": {
+            "dataCenterId": "EUR-IS-1",
+            "diskThroughputMBps": 4893,
+            "gpuTypeId": "NVIDIA L4",
+            "location": "IE",
+            "maxDownloadSpeedMbps": 4002,
+            "maxUploadSpeedMbps": 833,
+            "secureCloud": true,
+            "supportPublicIp": true,
+            "reservedCountVersion": 270223
+        },
+        "machineId": "wkozn4sxmr5k",
+        "memoryInGb": 62,
+        "name": "Ritwick",
+        "ports": [
+            "8888/http",
+            "22/tcp"
+        ],
+        "portMappings": null,
+        "publicIp": "",
+        "templateId": "runpod-torch-v21",
+        "vcpuCount": 16,
+        "volumeInGb": 250,
+        "volumeMountPath": "/workspace"
+    }
+]

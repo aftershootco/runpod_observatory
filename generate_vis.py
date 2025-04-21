@@ -25,10 +25,19 @@ def main():
                 "totalGPUs": summary["totalGPUs"],
                 "numberOfMachines": summary["numberOfMachines"],
                 "totalGPUhours": summary["totalGpuHours"],
+                "totalCostPerDay": summary["totalCostPerHour"] * 24,
             }
         )
 
     df_charts = pd.DataFrame(chart_data)
+
+    df_sorted = df_charts.sort_values(by="totalCostPerDay", ascending=False)
+    plt.bar(df_sorted["name"], df_sorted["totalCostPerDay"])
+    plt.xticks(rotation=45)
+    plt.title("Cost of GPU usage per Day by User (in dollars)")
+    plt.tight_layout()
+    plt.savefig("bar_totalCostPerDay.png")
+    plt.close()
 
     # 2.a) Bar chart: name vs totalCost, descending
     df_sorted = df_charts.sort_values(by="totalCost", ascending=False)
