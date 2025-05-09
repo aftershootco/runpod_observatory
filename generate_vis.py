@@ -88,18 +88,14 @@ def main():
             )
 
     df_table = pd.DataFrame(table_data)
-    df_table_sorted = df_table.sort_values(
-        by="running_time (in hours)", ascending=False
-    )
+    df_table_sorted = df_table.sort_values(by="running_time (in hours)", ascending=False)
 
     # Option A: Save table as PNG using a matplotlib table
     fig, ax = plt.subplots(figsize=(8, 0.5 + 0.3 * len(df_table_sorted)))
     ax.axis("off")
     # Build a list of lists for table display
     table_list = [df_table_sorted.columns.to_list()] + df_table_sorted.values.tolist()
-    the_table = ax.table(
-        cellText=table_list, colLabels=None, cellLoc="center", loc="center"
-    )
+    the_table = ax.table(cellText=table_list, colLabels=None, cellLoc="center", loc="center")
     the_table.auto_set_font_size(False)
     the_table.set_fontsize(8)
     the_table.scale(1, 1.2)  # Adjust scale as needed

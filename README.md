@@ -40,14 +40,17 @@ sh analyse_runpod.sh
 To automatically run the analysis every 3 hours:
 
 1. Open your crontab configuration:
+
    ```bash
    crontab -e
    ```
 
 2. Add the following line to the editor:
+
    ```
    0 */3 * * * /path/to/analyse_runpod.sh
    ```
+
    This tells cron to run `analyse_runpod.sh` every 3 hours (00:00, 03:00, 06:00, etc.)
 
 3. Save and exit the editor. The cron job is now active.

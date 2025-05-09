@@ -1,0 +1,18 @@
+name: Runpod Sampler
+on:
+  workflow_dispatch:
+  schedule: ## every hour
+    - cron: "0 * * * *"
+
+jobs:
+  sample_runpod:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Checkout
+        uses: actions/checkout@v3
+      - name: installer
+        run: pip install -r requirements.txt
+      - name: Run sample script
+        run: python sample_script.py
+        env:
+          RUNPOD_KEY: ${{ secrets.RUNPOD_KEY }}
