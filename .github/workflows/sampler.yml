@@ -1,0 +1,11 @@
+on:
+  schedule: ## every hour
+    - cron: "0 * * * *"
+jobs:
+  sample_runpod:
+    steps:
+      - name: installer
+        run: pip install -r requirements.txt
+
+      - name: Run sample script
+        run: python sample_script.py
