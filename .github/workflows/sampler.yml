@@ -8,7 +8,7 @@ jobs:
   sample_runpod:
     runs-on: ubuntu-latest
     steps:
-      - name : Checkout
+      - name: Checkout
         uses: actions/checkout@v3
       - name: installer
         run: pip install -r requirements.txt
