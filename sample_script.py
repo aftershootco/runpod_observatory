@@ -4,10 +4,12 @@ import os
 import json
 import gspread
 from google.oauth2.service_account import Credentials
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+from requests import post
+import pandas as pd
 
 op = os.path
-
+SUMMARY_COLS = ['cpu_util', 'mem_util', 'gpu_util', 'gpu_mem']
 QUERY = """query Pod {
   pod(input: {podId: "%s"}) {
     id
@@ -67,6 +69,35 @@ def sample(client):
     worksheet.append_rows(payload, value_input_option="USER_ENTERED", table_range="A1")
 
 
+def daily_summary(client):
+    spreadsheet = client.open_by_key("1_X8YlG4UBTVJfAIuknew64BZECCcBWrjoA_FibLYmDQ")
+    worksheet = spreadsheet.worksheet("Sheet1")
+    df = pd.DataFrame(worksheet.get_all_records())
+    df['timestamp'] = pd.to_datetime(df['timestamp'], utc=True)
+    since = datetime.now(timezone.utc) - timedelta(days=1)
+    df = df[df['timestamp'] >= since]
+    running = df[df['desiredStatus'] == 'RUNNING']
+    summary_df = (
+        running.groupby('name')[SUMMARY_COLS].mean().sort_values('gpu_util', ascending=False)
+    )
+    summary_text = "The highest average GPU utilization in the last 24 hours"
+    highest = summary_df['gpu_util'].max()
+    if highest <= 50:
+        summary_text += f" did not exceed {int(highest)}%."
+    else:
+        summary_text += f" was {int(highest)}%."
+    return summary_text, summary_df
+
+
 if __name__ == "__main__":
     client = auth()
     sample(client)
+    if os.environ.get('SLACK_WEBHOOK', False):
+        text, df = daily_summary(client)
+        print(df)  # noqa
+        print(text)  # noqa
+        post(
+            os.environ['SLACK_WEBHOOK'],
+            headers={'Content-Type': 'application/json'},
+            json={"text": "Test message"},
+        )
