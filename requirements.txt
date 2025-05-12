@@ -1,2 +1,4 @@
 runpod
 requests
+gspread
+google-auth

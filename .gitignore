@@ -1,2 +1,4 @@
 *.pdf
 *.png
+__pycache__/
+aftershoot*.json

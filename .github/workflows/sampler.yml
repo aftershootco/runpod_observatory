@@ -16,3 +16,4 @@ jobs:
         run: python sample_script.py
         env:
           RUNPOD_KEY: ${{ secrets.RUNPOD_KEY }}
+          GCS_SA: ${{ secrets.GCS_SA }}
