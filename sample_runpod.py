@@ -9,7 +9,8 @@ from requests import post
 import pandas as pd
 
 op = os.path
-SUMMARY_COLS = ['cpu_util', 'mem_util', 'gpu_util', 'gpu_mem']
+SUMMARY_COLS = ['gpu_util', 'gpu_mem']
+SUMMARY_COLNAMES = ['GPU Use (%)', 'GPU Memory (%)']
 QUERY = """query Pod {
   pod(input: {podId: "%s"}) {
     id
@@ -24,6 +25,16 @@ QUERY = """query Pod {
     }
   }
 }"""
+SUMMARY_TMPL = """*In the last 24 hours,*
+
+  🟢 *%d GPU instances* ran for a total of nearly *%d hours*
+
+  💸 We spent approx *$%d*
+
+  📈 The *most active instance* had an average GPU utilization of *%d%%*
+
+  📊 The *average GPU utilization was %d%%*
+"""
 
 
 def auth():
@@ -76,28 +87,40 @@ def daily_summary(client):
     df['timestamp'] = pd.to_datetime(df['timestamp'], utc=True)
     since = datetime.now(timezone.utc) - timedelta(days=1)
     df = df[df['timestamp'] >= since]
+    df = df[df['gpuCount'] > 0]
     running = df[df['desiredStatus'] == 'RUNNING']
     summary_df = (
         running.groupby('name')[SUMMARY_COLS].mean().sort_values('gpu_util', ascending=False)
     )
-    summary_text = "The highest average GPU utilization in the last 24 hours"
-    highest = summary_df['gpu_util'].max()
-    if highest <= 50:
-        summary_text += f" did not exceed {int(highest)}%."
-    else:
-        summary_text += f" was {int(highest)}%."
-    return summary_text, summary_df
+    summary_df.columns = SUMMARY_COLNAMES
+    slack_blocks = [
+        "*RunPod Summary*",
+        SUMMARY_TMPL
+        % (
+            len(summary_df),
+            len(running),
+            int(running['costPerHr'].sum()),
+            int(summary_df.iloc[0]['GPU Use (%)']),
+            int(summary_df['GPU Use (%)'].mean()),
+        ),
+        f"```{summary_df.to_markdown()}```",
+    ]
+    return slack_blocks, summary_df
 
 
 if __name__ == "__main__":
     client = auth()
-    sample(client)
-    if os.environ.get('SLACK_WEBHOOK', False):
-        text, df = daily_summary(client)
-        print(df)  # noqa
-        print(text)  # noqa
-        post(
-            os.environ['SLACK_WEBHOOK'],
+    webhook = os.environ.get('SLACK_WEBHOOK', False)
+    if webhook:
+        blocks, df = daily_summary(client)
+        blocks = [{'type': 'section', 'text': {'type': 'mrkdwn', 'text': b}} for b in blocks]
+        response = post(
+            webhook,
             headers={'Content-Type': 'application/json'},
-            json={"text": "Test message"},
+            json={"blocks": blocks},
+            timeout=30,
         )
+        print(response.text)  # noqa
+        response.raise_for_status()
+    else:
+        sample(client)
