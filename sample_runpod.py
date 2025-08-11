@@ -5,10 +5,11 @@ import json
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime, timezone, timedelta
-from requests import post
+from requests import post, get
 import pandas as pd
 
 op = os.path
+runpod.api_key = os.environ['RUNPOD_KEY']
 SUMMARY_COLS = ['gpu_util', 'gpu_mem']
 SUMMARY_COLNAMES = ['GPU Use (%)', 'GPU Memory (%)']
 QUERY = """query Pod {
@@ -29,7 +30,9 @@ SUMMARY_TMPL = """*In the last 24 hours,*
 
   🟢 *%d GPU instances* ran for a total of nearly *%d hours*
 
-  💸 We spent approx *$%d*
+  💸 We spent approx *$%d* on compute.
+
+  💸 We spent approx *$%d* on network volume storage.
 
   📈 The *most active instance* had an average GPU utilization of *%d%%*
 
@@ -68,7 +71,6 @@ def get_telemetry(pod_id):
 def sample(client):
     spreadsheet = client.open_by_key("1_X8YlG4UBTVJfAIuknew64BZECCcBWrjoA_FibLYmDQ")  # from URL
     worksheet = spreadsheet.worksheet("Sheet1")  # or by title
-    runpod.api_key = os.environ['RUNPOD_KEY']
     pods = runpod.get_pods()
     payload = []
     for pod in pods:
@@ -78,6 +80,21 @@ def sample(client):
         pod['timestamp'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         payload.append(list(pod.values()) + get_telemetry(pod['id']))
     worksheet.append_rows(payload, value_input_option="USER_ENTERED", table_range="A1")
+
+
+def get_storage_cost(client):
+    end_time = datetime.now(timezone.utc)
+    start_time = end_time - timedelta(days=1)
+    start_time = start_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+    end_time = end_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+    resp = get(
+        "https://rest.runpod.io/v1/billing/networkvolumes",
+        params={'startTime': start_time, 'endTime': end_time},
+        headers={'Authorization': f'Bearer {runpod.api_key}'},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    return sum([k['amount'] for k in resp.json()])
 
 
 def daily_summary(client):
@@ -93,6 +110,7 @@ def daily_summary(client):
         running.groupby('name')[SUMMARY_COLS].mean().sort_values('gpu_util', ascending=False)
     )
     summary_df.columns = SUMMARY_COLNAMES
+    storage_cost = get_storage_cost(client)
     slack_blocks = [
         "*RunPod Summary*",
         SUMMARY_TMPL
@@ -100,6 +118,7 @@ def daily_summary(client):
             len(summary_df),
             len(running),
             int(running['costPerHr'].sum()),
+            int(storage_cost),
             int(summary_df.iloc[0]['GPU Use (%)']),
             int(summary_df['GPU Use (%)'].mean()),
         ),
