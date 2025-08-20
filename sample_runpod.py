@@ -24,6 +24,7 @@ QUERY = """query Pod {
         memoryUtilization
       }
     }
+    networkVolumeId,
   }
 }"""
 SUMMARY_TMPL = """*In the last 24 hours,*
@@ -61,6 +62,7 @@ def get_telemetry(pod_id):
     mem_util = latest_telemetry['memoryUtilization']
     gpu_metrics = latest_telemetry['averageGpuMetrics']
     return [
+        result['data']['pod'].get('networkVolumeId', ''),
         cpu_util,
         mem_util,
         gpu_metrics['percentUtilization'],
